@@ -1,9 +1,9 @@
 webpackHotUpdate("static/development/pages/index.js",{
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./components/Layout.js":
+/*!******************************!*\
+  !*** ./components/Layout.js ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,28 +11,30 @@ webpackHotUpdate("static/development/pages/index.js",{
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/kelvintsoi/Desktop/JS/React/react-next/pages/index.js";
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar */ "./components/Navbar.js");
+var _jsxFileName = "/Users/kelvintsoi/Desktop/JS/React/react-next/components/Layout.js";
 
 
-var Index = function Index() {
+
+var Layout = function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 4
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 5
     },
     __self: this
-  }, "Hello this is next"));
+  }), props.children);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.4cb6c1d78a1cbc0cb694.hot-update.js.map
+//# sourceMappingURL=index.js.2274f0fbceaf0dc7ac49.hot-update.js.map
