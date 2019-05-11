@@ -1367,7 +1367,7 @@ var Index = function Index(props) {
       lineNumber: 9
     },
     __self: this
-  }, "Hello this is Fuxxy-Potato"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, "Hello this is Fuzzy-Potato"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
