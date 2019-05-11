@@ -316,10 +316,13 @@ function (_React$Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Prices, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      this.updateCurrency();
+    }
+  }, {
+    key: "updateCurrency",
+    value: function updateCurrency() {
       var list = "";
 
       if (this.state.currency === "USD") {
@@ -327,20 +330,20 @@ function (_React$Component) {
           className: "list-group-item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11
+            lineNumber: 15
           },
           __self: this
         }, "Bitcoin rate for ", this.props.bpi.USD.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
           className: "badge badge-primary",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 17
           },
           __self: this
         }, this.props.bpi.USD.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 18
           },
           __self: this
         }, this.props.bpi.USD.rate));
@@ -349,20 +352,20 @@ function (_React$Component) {
           className: "list-group-item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 23
           },
           __self: this
         }, "Bitcoin rate for ", this.props.bpi.GBP.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
           className: "badge badge-primary",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 25
           },
           __self: this
         }, this.props.bpi.GBP.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 26
           },
           __self: this
         }, this.props.bpi.GBP.rate));
@@ -371,42 +374,49 @@ function (_React$Component) {
           className: "list-group-item",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 31
           },
           __self: this
         }, "Bitcoin rate for ", this.props.bpi.EUR.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
           className: "badge badge-primary",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 33
           },
           __self: this
         }, this.props.bpi.EUR.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 34
           },
           __self: this
         }, this.props.bpi.EUR.rate));
       }
 
+      return list;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         className: "list-group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 45
         },
         __self: this
-      }, list), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
+      }, this.updateCurrency()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 46
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
@@ -418,28 +428,28 @@ function (_React$Component) {
         className: "form-control",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 47
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "USD",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 48
         },
         __self: this
       }, "USD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "GBP",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 49
         },
         __self: this
       }, "GBP"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
         value: "EUR",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 50
         },
         __self: this
       }, "EUR")));

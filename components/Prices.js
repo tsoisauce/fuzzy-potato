@@ -3,7 +3,11 @@ class Prices extends React.Component {
     currency: "USD"
   };
 
-  render() {
+  componentDidUpdate() {
+    this.updateCurrency();
+  }
+
+  updateCurrency() {
     let list = "";
 
     if (this.state.currency === "USD") {
@@ -32,9 +36,13 @@ class Prices extends React.Component {
       );
     }
 
+    return list
+  }
+
+  render() {
     return (
       <div>
-        <ul className="list-group">{list}</ul>
+        <ul className="list-group">{this.updateCurrency()}</ul>
         <br/>
         <select onChange={e => this.setState({currency: e.target.value})} className="form-control">
           <option value="USD">USD</option>
