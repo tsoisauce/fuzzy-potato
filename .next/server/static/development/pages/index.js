@@ -309,7 +309,7 @@ function (_React$Component) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Prices)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
-      currenct: 'USD'
+      currency: "USD"
     });
 
     return _this;
@@ -318,40 +318,131 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Prices, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var list = "";
+
+      if (this.state.currency === "USD") {
+        list = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.USD.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          },
+          __self: this
+        }, this.props.bpi.USD.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          },
+          __self: this
+        }, this.props.bpi.USD.rate));
+      } else if (this.state.currency === "GBP") {
+        list = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.GBP.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          },
+          __self: this
+        }, this.props.bpi.GBP.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          },
+          __self: this
+        }, this.props.bpi.GBP.rate));
+      } else if (this.state.currency === "EUR") {
+        list = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+          className: "list-group-item",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        }, "Bitcoin rate for ", this.props.bpi.EUR.description, ":", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+          className: "badge badge-primary",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          },
+          __self: this
+        }, this.props.bpi.EUR.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        }, this.props.bpi.EUR.rate));
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 36
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         className: "list-group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 37
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
-        className: "list-group-item",
+      }, list), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 38
         },
         __self: this
-      }, "Bitcoin rate for ", this.props.bpi.USD.description, ": ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        className: "badge badge-primary",
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+        onChange: function onChange(e) {
+          return _this2.setState({
+            currency: e.target.value
+          });
+        },
+        className: "form-control",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 39
         },
         __self: this
-      }, this.props.bpi.USD.code), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("strong", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "USD",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 40
         },
         __self: this
-      }, this.props.bpi.USD.rate))));
+      }, "USD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "GBP",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, "GBP"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", {
+        value: "EUR",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "EUR")));
     }
   }]);
 
@@ -1276,11 +1367,17 @@ var Index = function Index(props) {
       lineNumber: 9
     },
     __self: this
-  }, "Hello this is next"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Prices__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    bpi: props.bpi,
+  }, "Hello this is Fuxxy-Potato"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
+    },
+    __self: this
+  }, "Current Bitcoin price"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Prices__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    bpi: props.bpi,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
     },
     __self: this
   })));
